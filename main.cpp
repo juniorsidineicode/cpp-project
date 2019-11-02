@@ -8,7 +8,7 @@
 using namespace std;
 
 int main(){
-
+/*
 	bool teste_total;
     int troco = 0, option = 0, select = 0;
     float soma = 0;
@@ -105,5 +105,9 @@ int main(){
         
 
     }
+    */
+    Machine obj_machine;
+    cout << "Bem vindo a maquina de refrigerante! \n" << endl;
+    obj_machine.startmachine();
 
 }
