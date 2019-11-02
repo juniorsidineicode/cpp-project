@@ -1,6 +1,6 @@
-#include "Machine.h"
+#include "PC_machine.h"
 
-Machine::Machine(){
+PC_machine::PC_machine(){
 	M25 = 0;
 	M50 = 0;
 	M100 = 0;
@@ -10,12 +10,11 @@ Machine::Machine(){
 	refri = 0;
 }
 
-Machine::~Machine(){
-
+PC_machine::~PC_machine(){
 
 }
 
-void Machine::reset(){
+void PC_machine::reset(){
 	M25 = 0;
 	M50 = 0;
 	M100 = 0;
@@ -25,7 +24,7 @@ void Machine::reset(){
 	refri = 0;
 }
 
-void Machine::startmachine(){
+void PC_machine::startmachine(){
 	bool teste_total;
     int troco = 0, option = 0, select = 0;
     float soma = 0;
@@ -48,41 +47,41 @@ void Machine::startmachine(){
 
     	   switch(option){
     		  case 1:
-    		  	   Machine::incluiM25();
+    		  	   PC_machine::incluiM25();
     	           break;
     		  case 2:
-                    Machine::incluiM50();
+                    PC_machine::incluiM50();
                     break;
     		  case 3:
-                    Machine::incluiM100();
+                    PC_machine::incluiM100();
                     break;
     		  default: 
                     cout << "BUGOU";
             }
             
-            soma = Machine::acumulado();
-            troco = Machine::troco(soma);
+            soma = PC_machine::acumulado();
+            troco = PC_machine::troco(soma);
 	        cout << "total = R$" << soma << "\n"<< endl;
 
             switch(troco){
                 case 25:
-                    cout << "Troco R$ 0,25: " << Machine::trocoM25() << endl;
+                    cout << "Troco R$ 0,25: " << PC_machine::trocoM25() << endl;
                     break;
                 case 50:
-                    cout << "Troco R$ 0,50: " << Machine::trocoM50() << endl;
+                    cout << "Troco R$ 0,50: " << PC_machine::trocoM50() << endl;
                     break;
                 case 75:
-                    cout << "Troco R$ 0,25: " << Machine::trocoM25() << endl;
-                    cout << "Troco R$ 0,50: " << Machine::trocoM50() << endl;
+                    cout << "Troco R$ 0,25: " << PC_machine::trocoM25() << endl;
+                    cout << "Troco R$ 0,50: " << PC_machine::trocoM50() << endl;
                     break;
                 case 100:
-                    cout << "Troco R$ 1,00" << Machine::trocoM100() << endl;
+                    cout << "Troco R$ 1,00" << PC_machine::trocoM100() << endl;
                     break;
                 default:
                     break;
                 }
 
-            teste_total = Machine::teste(soma);
+            teste_total = PC_machine::teste(soma);
             //button_devolve = obj_machine.devolve();
 
         }
@@ -97,18 +96,18 @@ void Machine::startmachine(){
 
             switch(select){
                 case 1:
-                    escolhido = Machine::setRefri(select);
+                    escolhido = PC_machine::setRefri(select);
                     break;
                 case 2:
-                    escolhido = Machine::setRefri(select);
+                    escolhido = PC_machine::setRefri(select);
                     break;
                 case 3:
-                    button_devolve = Machine::devolve();
+                    button_devolve = PC_machine::devolve();
 
             }
 
             if(escolhido == 1 or button_devolve == 1){
-                Machine::reset();
+                PC_machine::reset();
                 //cout << "entrou" << endl;
                 soma = 0;
                 troco = 0;
@@ -122,43 +121,42 @@ void Machine::startmachine(){
     }
 
 }
-void Machine::incluiM25(){
+void PC_machine::incluiM25(){
 	M25 = M25 + 1;
-	//cout << "M25" << M25 << endl;
 }
 
-void Machine::incluiM50(){
+void PC_machine::incluiM50(){
 	M50 = M50 + 1;
 }
-void Machine::incluiM100(){
+void PC_machine::incluiM100(){
 	M100 = M100 + 1;
 }
 
-bool Machine::trocoM25(){
+bool PC_machine::trocoM25(){
 	return true;
 }
 
-bool Machine::trocoM50(){
+bool PC_machine::trocoM50(){
 	return true;
 }
 
-bool Machine::trocoM100(){
+bool PC_machine::trocoM100(){
 	return true;
 }
-bool Machine::devolve(){
+bool PC_machine::devolve(){
 	cout << "Troco devolvido!" << endl;
 	return true;	
 }
 
-int Machine::troco(int total){
+int PC_machine::troco(int total){
 	return total - 150;
 }
 
-float Machine::acumulado(){
+float PC_machine::acumulado(){
 	return 0.25*M25 + 0.50*M50 + 1.00*M100;
 }
 
-bool Machine::teste(float total){
+bool PC_machine::teste(float total){
 	float result = total;
 	if(result >= 1.50){
 		return true;
@@ -169,7 +167,7 @@ bool Machine::teste(float total){
 	
 }
 
-bool Machine::setRefri(int tipo_refri){
+bool PC_machine::setRefri(int tipo_refri){
 	int escolhido = tipo_refri;
 
 	switch(escolhido){
@@ -185,7 +183,6 @@ bool Machine::setRefri(int tipo_refri){
 
 		default :
 			cout << "Marca nao definida";
-			//return false;
 			break;
 	}
 

@@ -1,19 +1,19 @@
-#ifndef MACHINE_H
-#define MACHINE_H
+#ifndef PC_MACHINE_H
+#define PC_MACHINE_H
 
 #include <iostream>
 #include <stdlib.h>
 
 using namespace std;
 
-class Machine{
+class PC_machine{
           int M25, M50, M100;
           int total;
           bool devolucao;
           int refri, sel;
      public:
-          Machine();
-          ~Machine();
+          PC_machine();
+          ~PC_machine();
           bool trocoM25();
           bool trocoM50();
           bool trocoM100();
