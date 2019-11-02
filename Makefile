@@ -1,6 +1,6 @@
 CXX = g++
 CXXFLAGS = -Wall
-SRCS = PC_machine.cpp Calendar.cpp Clock.cpp ClockCalendar.cpp main.cpp
+SRCS = Machine.cpp PC_machine.cpp Calendar.cpp Clock.cpp ClockCalendar.cpp main.cpp
 OBJS = ${SRCS:.cpp=.o}
 
 all: linux
@@ -8,6 +8,9 @@ all: linux
 linux: $(OBJS)
 	$(CXX) $(CXXFLAGS) $(OBJS) -o main
 	chmod +x main
+
+Machine: $@.cpp $@.h
+	$(CXX) $(CXXFLAGS) $@.cpp -c
 	
 PC_machine: $@.cpp $@.h
 	$(CXX) $(CXXFLAGS) $@.cpp -c

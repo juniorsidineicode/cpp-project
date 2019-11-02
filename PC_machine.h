@@ -3,17 +3,18 @@
 
 #include <iostream>
 #include <stdlib.h>
+#include "Machine.h"
 
 using namespace std;
 
-class PC_machine{
+class PC_machine: public Machine{
           int M25, M50, M100;
           int total;
           bool devolucao;
           int refri, sel;
      public:
-          PC_machine();
-          ~PC_machine();
+          PC_machine(void);
+          ~PC_machine(void);
           bool trocoM25();
           bool trocoM50();
           bool trocoM100();

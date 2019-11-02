@@ -5,10 +5,15 @@
     Autor: Sidinei Lindomar da Rocha Junior
     Contato: junior.sidinei@gmail.com
     Github: juniorsidineicode
+
+    Com duas opções para compilação 
+    #include "PC_machine.h" -> para compilar e utilizar no PC
+    #include "SYS_machine.h" -> para compilar e utilizar na placa
 */
 
 #include <iostream>
 #include "PC_machine.h"
+//#include "SYS_machine.h" //Descomentar apenas quando for compilar para placa
 #include "ClockCalendar.h"
 #include <time.h>
 #include <string>
