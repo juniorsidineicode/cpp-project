@@ -97,9 +97,9 @@ void Log::totalCompras() {
     num_total = num_meet + num_etirps;
 
     cout << " \n Quantidade total de compras MEET: " << num_meet << endl;
-    cout << " \n Valor total de compras MEET: " << val_meet << endl;
+    cout << " \n Valor total de compras MEET: R$ " << val_meet << endl;
     cout << " \n Quantidade total de compras ETIRPS: " << num_etirps << endl;
-	cout << " \n Valor total de compras ETIRPS: " << val_etirps << endl;
+	cout << " \n Valor total de compras ETIRPS: R$ " << val_etirps << endl;
 	cout << " \n Quantidade total de compras: " << num_total << endl;
 	cout << " \n Valor total de compras: R$ " << val_total << endl;
 	cout << "\n" << endl;
