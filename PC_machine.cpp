@@ -1,4 +1,11 @@
 #include "PC_machine.h"
+#include "log.h"
+
+
+using namespace std;
+
+Log obj_lista;
+
 
 PC_machine::PC_machine(){
 	M25 = 0;
@@ -25,6 +32,7 @@ void PC_machine::reset(){
 }
 
 void PC_machine::startmachine(){
+
 	bool teste_total;
     int troco = 0, option = 0, select = 0;
     float soma = 0;
@@ -41,6 +49,7 @@ void PC_machine::startmachine(){
             cout << "1 - R$ 0,25" << endl;
             cout << "2 - R$ 0,50" << endl;
             cout << "3 - R$ 1,00" << endl;
+            cout << "4 - ADM" << endl;
             cin >> option;
 
             
@@ -55,13 +64,16 @@ void PC_machine::startmachine(){
     		  case 3:
                     PC_machine::incluiM100();
                     break;
+              case 4:
+                    obj_lista.totalCompras();
+                    break;
     		  default: 
                     cout << "BUGOU";
             }
             
             soma = PC_machine::acumulado();
             troco = PC_machine::troco(soma);
-	        cout << "total = R$" << soma << "\n"<< endl;
+	        //cout << "total = R$" << soma << "\n"<< endl;
 
             switch(troco){
                 case 25:
@@ -173,12 +185,14 @@ bool PC_machine::setRefri(int tipo_refri){
 	switch(escolhido){
 		case 1:
 			cout << "Voce selecionou o refri MEET \n" << endl;
+            obj_lista.insertAfterLast(1, 1.50);
 			//return true;
 			break;
 
 		case 2:
 			cout << "Voce selecionou o refri ETIRPS \n" << endl;
-			//return true;
+			obj_lista.insertAfterLast(2, 1.50);
+            //return true;
 			break;
 
 		default :

@@ -22,8 +22,10 @@
 using namespace std;
 
 int main(){
+
     PC_machine obj_machine;
     cout << "\n Bem vindo a maquina de refrigerante! \n" << endl;
     obj_machine.startmachine();
+    
 
 }

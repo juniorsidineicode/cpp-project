@@ -13,6 +13,6 @@ class Machine{
 		Machine(void);
 		~Machine(void);
 		virtual void startmachine() = 0;
-};
 
+};
 #endif

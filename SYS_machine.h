@@ -12,7 +12,7 @@ class SYS_machine: public Machine{
    public:
 	SYS_machine(void);
 	~SYS_machine(void);
-	void start();
+	void startmachine();
 
 };
 #endif
