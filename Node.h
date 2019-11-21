@@ -22,7 +22,5 @@ class Node {
     int getRefri();
     float getValrefri();
 
-    
-
 };
 #endif

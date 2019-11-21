@@ -1,6 +1,9 @@
 #ifndef MACHINE_H
 #define MACHINE_H
 
+#include <iostream>
+#include <stdlib.h>
+
 using namespace std;
  
 class Machine{

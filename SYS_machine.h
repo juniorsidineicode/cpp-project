@@ -31,6 +31,7 @@ class SYS_machine: public Machine{
     void incluiM50();
     void incluiM100();
     void reset();
+    int delay(int lim);
     
 };
 #endif

@@ -13,20 +13,22 @@ class PC_machine: public Machine{
           bool devolucao;
           int refri, sel;
      public:
-          PC_machine(void);
-          ~PC_machine(void);
+          PC_machine();
+          ~PC_machine();
           bool trocoM25();
           bool trocoM50();
           bool trocoM100();
           bool devolve();
           bool teste(float total);
-          bool setRefri(int tipo_refri);
           float acumulado();
           int troco(int total);
-          void startmachine();
           void incluiM25();
           void incluiM50();
           void incluiM100();
           void reset();
+          
+          bool setRefri(int tipo_refri);
+          void startmachine() override;
+
 };
 #endif

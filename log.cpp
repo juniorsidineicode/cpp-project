@@ -62,6 +62,7 @@ void Log::removeFirst() {
 
 void Log::totalCompras() {
     Node* temp = head;
+    Node* temp_delete = head;
     int i = 0;
     float val_meet = 0;
     int num_meet = 0;
@@ -103,4 +104,8 @@ void Log::totalCompras() {
 	cout << " \n Quantidade total de compras: " << num_total << endl;
 	cout << " \n Valor total de compras: R$ " << val_total << endl;
 	cout << "\n" << endl;
+
+    while(temp_delete != 0){
+        removeFirst();
+    }
 }

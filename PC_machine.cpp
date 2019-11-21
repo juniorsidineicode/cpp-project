@@ -133,6 +133,7 @@ void PC_machine::startmachine(){
     }
 
 }
+
 void PC_machine::incluiM25(){
 	M25 = M25 + 1;
 }
@@ -175,8 +176,7 @@ bool PC_machine::teste(float total){
 	}
 	else{
 		return false;	
-	}
-	
+	}	
 }
 
 bool PC_machine::setRefri(int tipo_refri){
