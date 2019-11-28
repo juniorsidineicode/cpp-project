@@ -1,4 +1,6 @@
 #include "log.h"
+#include "time.h"
+#include <iomanip>
 
 /*
     Classe log para montar o relatório de vendas chamado de log
@@ -10,6 +12,8 @@
 
 //refrigerante = 1 MEET
 //refrigerante = 2 ETIRPS
+
+using namespace std;
 
 Log::Log(){
 	head = 0;
@@ -77,7 +81,7 @@ int Log::totalCompras() {
     unsigned int compraHora_etirps, compraHora_meet;
     unsigned int compraMin_etirps, compraMin_meet;
     unsigned int compraSeg_etirps, compraSeg_meet;
-    bool periodo_etirps, periodo_meet;
+    //bool periodo_etirps, periodo_meet;
     int i = 0;
     float val_meet = 0;
     int num_meet = 0;
@@ -136,7 +140,7 @@ int Log::totalCompras() {
     cout << setw(2) << setfill('0') << compraMin_meet;
     cout << ":";
     cout << setw(2) << setfill('0') << compraSeg_meet;
-    cout << (periodo_meet ? " pm" : " am") << endl;
+    //cout << (periodo_meet ? " pm" : " am") << endl;
 
 
 
@@ -153,7 +157,7 @@ int Log::totalCompras() {
     cout << setw(2) << setfill('0') << compraMin_etirps;
     cout << ":";
     cout << setw(2) << setfill('0') << compraSeg_etirps;
-    cout << (periodo_etirps ? " pm" : " am") << endl;
+    //cout << (periodo_etirps ? " pm" : " am") << endl;
 
 
 	cout << " \n Quantidade total de compras: " << num_total << endl;

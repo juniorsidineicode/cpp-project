@@ -3,12 +3,14 @@
 #include <iostream>
 #include <iomanip>
 
+using namespace std;
+
 ClockCount::ClockCount(){
 
 }
 
 
-void *contador(void *pointer){
+void * ClockCount::contador(void *pointer){
 	ClockCalendar* Calendar = static_cast<ClockCalendar*>(pointer);
 
 	unsigned int year, month, day, hour, min, sec;
@@ -43,7 +45,7 @@ ClockCount* ClockCount::instance = nullptr;
 ClockCount* ClockCount::takeinstance(){
 	if (ClockCount::instance == nullptr){
 		ClockCount::instance = new ClockCount();
-		std::thread ClockThread([&]()
+		thread ClockThread([&]()
 		{
 			ClockCount::instance->takeinstance()->contador(static_cast<void*>(ClockCount::instance->takeinstance()->calendar));
 		});

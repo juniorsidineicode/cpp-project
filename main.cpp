@@ -16,7 +16,7 @@
 #include "Machine.h"
 //#include "SYS_machine.h" //Descomentar apenas quando for compilar para placa
 #include "ClockCalendar.h"
-#include "ClockCount.h"
+#include "Clockcount.h"
 #include <thread>
 #include <time.h>
 #include <string>
@@ -24,11 +24,13 @@
 
 using namespace std;
 
-void main(){
-    obj_contador ClockCount::takeinstance(); //contar o tempo durante o uso da machine
+int main(){
+    ClockCount::takeinstance(); //contar o tempo durante o uso da machine
     
     cout << "\n Bem vindo a maquina de refrigerante! \n" << endl;
     PC_machine obj_machine;
     obj_machine.startmachine();
+
+    return 0;
     
 }

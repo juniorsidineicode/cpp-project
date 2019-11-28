@@ -7,6 +7,7 @@
 */
 
 #include "Node.h"
+#include "Clockcount.h"
 
 //refrigerante = 1 MEET
 //refrigerante = 2 ETIRPS
@@ -16,8 +17,8 @@ Node::Node(int s, float p, Node* nxt){
   valor_refri = p;
   next = nxt;
 
-  ClockCount::takeinstance()->Calendar->readClock(var_compraHora, var_compraMin, var_compraSeg, var_periodo);
-  ClockCount::takeinstance()->Calendar->readCalendar(var_compraAno, var_compraMes, var_compraDia);
+  ClockCount::takeinstance()->calendar->readClock(var_compraHora, var_compraMin, var_compraSeg, var_periodo);
+  ClockCount::takeinstance()->calendar->readCalendar(var_compraAno, var_compraMes, var_compraDia);
 }
 
 Node::~Node(){
