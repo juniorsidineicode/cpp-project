@@ -12,6 +12,8 @@
 
 #include "PC_machine.h"
 #include "log.h"
+#include <chrono>
+
 
 using namespace std;
 
@@ -212,4 +214,15 @@ bool PC_machine::setRefri(int tipo_refri){
 	}
 
 	return true;
+}
+
+void PC_machine::suporte(){
+
+    thread ReporThread([this]()
+    {
+
+        obj_lista.totalCompras();
+    });
+
+    ReporThread.join();
 }

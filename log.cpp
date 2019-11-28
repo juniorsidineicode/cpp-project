@@ -71,6 +71,13 @@ void Log::removeFirst() {
 int Log::totalCompras() {
     Node* temp = head;
     Node* temp_delete = head;
+    unsigned int compraAno_etirps, compraAno_meet;
+    unsigned int compraMes_etirps, compraMes_meet;
+    unsigned int compraDia_etirps, compraDia_meet;
+    unsigned int compraHora_etirps, compraHora_meet;
+    unsigned int compraMin_etirps, compraMin_meet;
+    unsigned int compraSeg_etirps, compraSeg_meet;
+    bool periodo_etirps, periodo_meet;
     int i = 0;
     float val_meet = 0;
     int num_meet = 0;
@@ -88,7 +95,12 @@ int Log::totalCompras() {
             num_meet++;
             cout <<"Valor: " << temp->getValrefri() << endl;
             val_meet += temp->getValrefri();
-
+            compraAno_meet = temp -> compraAno();
+            compraMes_meet = temp -> compraMes();
+            compraDia_meet = temp -> compraDia();
+            compraHora_meet = temp -> compraHora();
+            compraMin_meet = temp -> compraMin();
+            compraSeg_meet = temp -> compraSeg();
         }
 
         if(temp->getRefri() == 2){ 
@@ -96,6 +108,12 @@ int Log::totalCompras() {
             num_etirps++;
             cout <<"Valor: " << temp->getValrefri() << endl;
             val_etirps += temp->getValrefri();
+            compraAno_etirps = temp -> compraAno();
+            compraMes_etirps = temp -> compraMes();
+            compraDia_etirps = temp -> compraDia();
+            compraHora_etirps = temp -> compraHora();
+            compraMin_etirps = temp -> compraMin();
+            compraSeg_etirps = temp -> compraSeg();
         }
         
         
@@ -107,8 +125,37 @@ int Log::totalCompras() {
 
     cout << " \n Quantidade total de compras MEET: " << num_meet << endl;
     cout << " \n Valor total de compras MEET: R$ " << val_meet << endl;
+    cout << setw(4) << setfill('0') << compraAno_meet;
+    cout << "/";
+    cout << setw(2) << setfill('0') << compraMes_meet;
+    cout << "/";
+    cout << setw(2) << setfill('0') << compraDia_meet;
+    cout << " - ";
+    cout << setw(2) << setfill('0') << compraHora_meet;
+    cout << ":";
+    cout << setw(2) << setfill('0') << compraMin_meet;
+    cout << ":";
+    cout << setw(2) << setfill('0') << compraSeg_meet;
+    cout << (periodo_meet ? " pm" : " am") << endl;
+
+
+
     cout << " \n Quantidade total de compras ETIRPS: " << num_etirps << endl;
 	cout << " \n Valor total de compras ETIRPS: R$ " << val_etirps << endl;
+    cout << setw(4) << setfill('0') << compraAno_etirps;
+    cout << "/";
+    cout << setw(2) << setfill('0') << compraMes_etirps;
+    cout << "/";
+    cout << setw(2) << setfill('0') << compraDia_etirps;
+    cout << " - ";
+    cout << setw(2) << setfill('0') << compraHora_etirps;
+    cout << ":";
+    cout << setw(2) << setfill('0') << compraMin_etirps;
+    cout << ":";
+    cout << setw(2) << setfill('0') << compraSeg_etirps;
+    cout << (periodo_etirps ? " pm" : " am") << endl;
+
+
 	cout << " \n Quantidade total de compras: " << num_total << endl;
 	cout << " \n Valor total de compras: R$ " << val_total << endl;
 	cout << "\n" << endl;

@@ -24,12 +24,11 @@
 
 using namespace std;
 
-int main(){
+void main(){
     obj_contador ClockCount::takeinstance(); //contar o tempo durante o uso da machine
     
     cout << "\n Bem vindo a maquina de refrigerante! \n" << endl;
     PC_machine obj_machine;
     obj_machine.startmachine();
     
-
 }

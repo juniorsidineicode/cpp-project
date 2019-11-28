@@ -5,7 +5,7 @@ class ClockCount{
 private:
 	static ClockCount *instance;
 	ClockCount();
-	void contador(void *pointer);
+	void *contador(void *pointer);
 
 public:
 	static ClockCount *takeinstance();

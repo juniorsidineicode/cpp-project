@@ -15,6 +15,8 @@
 #include <iostream>
 #include <stdlib.h>
 #include "Machine.h"
+#include <thread>
+
 
 using namespace std;
 
@@ -23,6 +25,8 @@ class PC_machine: public Machine{
           int total;
           bool devolucao;
           int refri, sel;
+          thread ReporThread;
+
      public:
           PC_machine();
           ~PC_machine();
@@ -40,6 +44,7 @@ class PC_machine: public Machine{
           
           bool setRefri(int tipo_refri);
           void startmachine() override;
+          void suporte();
 
 };
 #endif

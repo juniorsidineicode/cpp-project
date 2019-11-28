@@ -1,6 +1,6 @@
 CXX = g++
-CXXFLAGS = -Wall
-SRCS = Machine.cpp PC_machine.cpp Calendar.cpp Clock.cpp ClockCalendar.cpp Node.cpp log.cpp main.cpp
+CXXFLAGS = -Wall -pthread
+SRCS = Machine.cpp PC_machine.cpp Calendar.cpp Clock.cpp Clockcount.cpp ClockCalendar.cpp Node.cpp log.cpp main.cpp
 OBJS = ${SRCS:.cpp=.o}
 
 all: linux
@@ -22,6 +22,9 @@ calendar: $@.cpp $@.h
 	$(CXX) $(CXXFLAGS) $@.cpp -c
 
 clockCalendar: $@.cpp $@.h
+	$(CXX) $(CXXFLAGS) $@.cpp -c
+
+Clockcount: $@.cpp $@.h
 	$(CXX) $(CXXFLAGS) $@.cpp -c
 
 Node: $@.cpp $@.h
