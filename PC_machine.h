@@ -1,6 +1,17 @@
 #ifndef PC_MACHINE_H
 #define PC_MACHINE_H
 
+/*
+     Classe PC_machine responsável pelo funcionamento do projeto
+     utilizando o computador, interface de comunicação o terminal
+     onde o cliente pode escolher os produtos e os valores de entrada
+     recebendo o troco.
+     Arquivo .h onde definimos todos os componentes da classe, como
+     variáveis, funções, heranças e classificação de publico e privado.
+     startmachine é uma função virtual da classe Machine que será escri-
+     ta pela PC_machine.
+*/
+
 #include <iostream>
 #include <stdlib.h>
 #include "Machine.h"

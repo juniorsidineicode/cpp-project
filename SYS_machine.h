@@ -1,6 +1,19 @@
 #ifndef SYS_MACHINE_H
 #define SYS_MACHINE_H
 
+/*
+     Classe SYS_machine responsável pelo funcionamento do projeto
+     utilizando a placa, interface de comunicação os botões e a 
+     interface com o pc onde o cliente pode escolher os produtos 
+     e os valores de entrada como as moedas a se pagar são recebidas
+     pelos botões da placa recebendo o troco.
+     Arquivo .h onde definimos todos os componentes da classe, como
+     variáveis, funções, heranças e classificação de publico e privado.
+     startmachine é uma função virtual da classe Machine que será escri-
+     ta pela SYS_machine.
+*/
+
+
 #include <stdio.h>
 #include <iostream>
 #include <bitset>

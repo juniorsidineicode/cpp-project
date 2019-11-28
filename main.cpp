@@ -16,6 +16,8 @@
 #include "Machine.h"
 //#include "SYS_machine.h" //Descomentar apenas quando for compilar para placa
 #include "ClockCalendar.h"
+#include "ClockCount.h"
+#include <thread>
 #include <time.h>
 #include <string>
 #include <iomanip>
@@ -23,18 +25,10 @@
 using namespace std;
 
 int main(){
-
-    PC_machine obj_machine;
-    //ClockCalendar cc (2019, 6, 30, 11, 59, 55, true);
-    //unsigned int year, month, day, hour, min, sec;
-    //bool isPM;
-
-    //bool secondAdvanced = false;
-    //time_t now, elapsed;
-    //double seconds;
-
+    obj_contador ClockCount::takeinstance(); //contar o tempo durante o uso da machine
+    
     cout << "\n Bem vindo a maquina de refrigerante! \n" << endl;
-
+    PC_machine obj_machine;
     obj_machine.startmachine();
     
 

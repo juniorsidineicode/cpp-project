@@ -1,6 +1,18 @@
 #include "SYS_machine.h"
 #include "log.h"
 
+
+/*
+     Classe SYS_machine responsável pelo funcionamento do projeto
+     utilizando a placa, interface de comunicação os botões e a 
+     interface com o pc onde o cliente pode escolher os produtos 
+     e os valores de entrada como as moedas a se pagar são recebidas
+     pelos botões da placa recebendo o troco.
+     Arquivo .cpp onde implementamos os componentes da classe, como
+     as funções e carregamos a função virtual da classe Machine para
+     o funcionamento.
+*/
+
 /*VARIAVEIS GLOBAIS PARA ACESSOS AS CHAVES/SAIDAS*/
 volatile unsigned int *data = (volatile unsigned int *)0x80000a00;
 volatile unsigned int *output = (volatile unsigned int *)0x80000a04;

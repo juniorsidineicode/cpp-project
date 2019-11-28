@@ -11,3 +11,4 @@ Machine::Machine(void){
 Machine::~Machine(){
 
 }
+

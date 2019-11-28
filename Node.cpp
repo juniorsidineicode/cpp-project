@@ -1,3 +1,11 @@
+/*
+    Classe node para montar o relatório de vendas chamado de log
+    utilizado numa FIFO para extração do log do sistema de vendas
+    implementamos um node para setar o refrigerante vendido
+    seu preço e horario de venda.
+    Arquivo .cpp com implementação das funções que usaremos.
+*/
+
 #include "Node.h"
 
 //refrigerante = 1 MEET

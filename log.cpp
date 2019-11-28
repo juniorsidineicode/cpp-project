@@ -1,5 +1,13 @@
 #include "log.h"
 
+/*
+    Classe log para montar o relatório de vendas chamado de log
+    utilizado numa FIFO para geração do log do sistema de vendas
+    implementamos um log para mostrar o refrigerante vendido
+    seu preço e horario de venda.
+   Arquivo .cpp com implementação das funções que usaremos.
+*/
+
 //refrigerante = 1 MEET
 //refrigerante = 2 ETIRPS
 
@@ -60,7 +68,7 @@ void Log::removeFirst() {
     }
 }
 
-void Log::totalCompras() {
+int Log::totalCompras() {
     Node* temp = head;
     Node* temp_delete = head;
     int i = 0;
@@ -108,4 +116,6 @@ void Log::totalCompras() {
     while(temp_delete != 0){
         removeFirst();
     }
+    return 0;
+
 }

@@ -1,6 +1,17 @@
+/*
+     Classe PC_machine responsável pelo funcionamento do projeto
+     utilizando o computador, interface de comunicação o terminal
+     onde o cliente pode escolher os produtos e os valores de entrada
+     recebendo o troco.
+     Arquivo .cpp onde implementamos os componentes da classe, como
+     as funções e carregamos a função virtual da classe Machine para
+     o funcionamento.
+*/
+
+
+
 #include "PC_machine.h"
 #include "log.h"
-
 
 using namespace std;
 
